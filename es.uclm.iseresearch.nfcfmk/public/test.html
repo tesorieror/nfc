@@ -1,0 +1,35 @@
+<html>
+<head>
+
+<script src="model.js"></script>
+<script src="router.js"></script>
+<script src="index.js"></script>
+</head>
+<body onload="init()">
+	<form onsubmit="return false">
+		<label for="router">Router</label>
+		<br>
+		<select name="router" onchange="routerChanged()">
+			<option value="TagRouter">Tag</option>
+			<option value="LocalRouter" selected>Local</option>
+			<option value="RemoteRouter">Remote</option>
+		</select>
+		<br>
+		<label for="tagid">ID:</label>
+		<br>
+		<input type="TEXT" placeholder="Enter TAG ID" size="50" name="tagid"
+			value="FIRST_PHOTO">
+		<br>
+		<label for="tagcontent">Content:</label>
+		<br>
+		<input type="TEXT" placeholder="Enter TAG content" size="50"
+			name="tagcontent" value="firstPhoto">
+		<br>
+		<input type="BUTTON" placeholder="Discover" onclick="discover(event)"
+			value="Discover">
+	</form>
+	<div name="content">
+		<span name="action"></span>
+	</div>
+</body>
+</html>
