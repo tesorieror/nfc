@@ -1,17 +1,51 @@
 <html>
 <head>
-
-<script src="model.js"></script>
-<script src="router.js"></script>
-<script src="index.js"></script>
+<script src="local/model.js"></script>
+<script src="local/controller.js"></script>
+<script src="local/view.js"></script>
 </head>
 <body onload="init()">
-<img src=""/>
-	<form onsubmit="return false">
-		<input type="BUTTON" onclick="first(event)" value="First">
-		<input type="BUTTON" onclick="prev(event)" value="Prev">
-		<input type="BUTTON" onclick="next(event)" value="Next">
-		<input type="BUTTON" onclick="last(event)" value="Last">
-	</form>
+	<header>
+		<h1>Image Gallery</h1>
+	</header>
+	<main> <img id="photoID" name="photo" src="" /> </main>
+	<nav>
+		<h2>
+			Gallery
+			</h1>
+			<form onsubmit="return false">
+				<input type="BUTTON"
+					onclick="controller.firstGalleryButtonClicked(event)" value="First"
+					name="firstGalleryButton" id="firstGalleryButtonId">
+				<input type="BUTTON"
+					onclick="controller.prevGalleryButtonClicked(event)" value="Prev"
+					name="prevGalleryButton" id="prevGalleryButtonId">
+				<input type="BUTTON"
+					onclick="controller.nextGalleryButtonClicked(event)" value="Next"
+					name="nextGalleryButton" id="nextGalleryButtonId">
+				<input type="BUTTON"
+					onclick="controller.lastGalleryButtonClicked(event)" value="Last"
+					name="lastGalleryButton" id="lastGalleryButtonId">
+			</form>
+	</nav>
+	<nav>
+		<h2>
+			Photo
+			</h1>
+			<form onsubmit="return false">
+				<input type="BUTTON"
+					onclick="controller.firstPhotoButtonClicked(event)" value="First"
+					name="firstPhotoButton" id="firstPhotoButtonId">
+				<input type="BUTTON"
+					onclick="controller.prevPhotoButtonClicked(event)" value="Prev"
+					name="prevPhotoButton" id="prevPhotoButtonId">
+				<input type="BUTTON"
+					onclick="controller.nextPhotoButtonClicked(event)" value="Next"
+					name="nextPhotoButton" id="nextPhotoButtonId">
+				<input type="BUTTON"
+					onclick="controller.lastPhotoButtonClicked(event)" value="Last"
+					name="lastPhotoButton" id="lastPhotoButtonId">
+			</form>
+	</nav>
 </body>
 </html>
