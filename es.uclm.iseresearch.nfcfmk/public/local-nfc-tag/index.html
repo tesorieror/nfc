@@ -1,0 +1,36 @@
+<html>
+<head>
+<script src="../local/aspects.js"></script>
+<script src="../local-nfc-id/actions.js"></script>
+<script src="../local/model.js"></script>
+<script src="nfc-tag-controller.js"></script>
+<script src="../local-nfc-id/view.js"></script>
+</head>
+<body onload="init()">
+	<header>
+		<h1>Image Gallery</h1>
+	</header>
+	<main>
+	<section>
+		<article>
+			<img id="photoID" name="photo" src="" />
+		</article>
+	</section>
+	</main>
+	<nav>
+		<select name="tagDiscoveredSelect" id="tagDiscoveredSelectID">
+			<option value="FIRST_PHOTO">First Photo</option>
+			<option value="PREV_PHOTO">Prev Photo</option>
+			<option value="NEXT_PHOTO">Next Photo</option>
+			<option value="LAST_PHOTO">Last Photo</option>
+			<option value="FIRST_GALLERY">First Gallery</option>
+			<option value="PREV_GALLERY">Prev Gallery</option>
+			<option value="NEXT_GALLERY">Next Gallery</option>
+			<option value="LAST_GALLERY">Last Gallery</option>
+		</select>
+		<input name="tagDiscoveredButton" id="tagDiscoveredButtonID"
+			type="button" onclick="tagDiscoveredButtonClicked(event)"
+			value="Discover!">
+	</nav>
+</body>
+</html>
