@@ -2,10 +2,6 @@
  * http://usejsdoc.org/
  */
 
-var Aspects = {
-	"PHOTO_CHANGED" : 0,
-	"GALLERY_CHANGED" : 1
-}
 
 var Model = function() {
 	var self = this
@@ -83,8 +79,8 @@ var Model = function() {
 	}
 
 	this.firstGallery = function() {
-		self.SetGalleryIndex(0)
-		self.SetPhotoIndex(0)
+		self.setGalleryIndex(0)
+		self.setPhotoIndex(0)
 	}
 
 	this.lastGallery = function() {
